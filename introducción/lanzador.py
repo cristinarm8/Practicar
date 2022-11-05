@@ -1,4 +1,4 @@
-from clases_estructura import Vehiculo, Coche, Camioneta, Bicicleta, Motocicleta
+from clases_estructura import Coche, Camioneta, Bicicleta, Motocicleta
 
 # Función catalogar(): reciba lista de vehículos y los recorra mostrando el nombre de su clase y sus traibutos.
 print("\nImprimiendo lista_vehiculos: ")
@@ -6,7 +6,7 @@ print("\nImprimiendo lista_vehiculos: ")
 def catalogar(lista_vehiculos):
 
     for x in lista_vehiculos:
-        print(type(x).__name__, x)
+        print(type(x).__name__, str(x) + "\n")
 
 
 def catalogar_nueva_version(lista_vehiculos, ruedas = None):
@@ -22,7 +22,7 @@ def catalogar_nueva_version(lista_vehiculos, ruedas = None):
         
         else:
             if x.ruedas == ruedas:
-                print(type(x).__name__, x)
+                print(type(x).__name__, str(x) + "\n")
                 contador += 1
 
     print("Se han encontrado {} vehículos con {} ruedas".format(contador, ruedas))  
@@ -42,7 +42,7 @@ def ejecutar():
     lista_vehiculos.append(motocicleta)
 
     catalogar(lista_vehiculos)
-    catalogar_nueva_version(lista_vehiculos)
+    #catalogar_nueva_version(lista_vehiculos)
     catalogar_nueva_version(lista_vehiculos, 0)
     catalogar_nueva_version(lista_vehiculos, 2)
     catalogar_nueva_version(lista_vehiculos, 4)
